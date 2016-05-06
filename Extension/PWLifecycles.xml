@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<ParallelWorkflows xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <PWLifecycle Name="Parallel Approval">
+      <PWState Name ="Approved - Engineering"></PWState>
+      <PWState Name ="Approved - Manufacturing"></PWState>
+      <PWState Name ="Approved - Project Manager"></PWState>
+      <PWFinalState Name ="Released (Fully Approved)"></PWFinalState>
+    </PWLifecycle>
+    <PWLifecycle Name="Parallel NPI">
+      <PWState Name ="NPI Engineeering"></PWState>
+      <PWState Name ="NPI Manufacturing"></PWState>
+      <PWFinalState Name ="NPI Fully Approved"></PWFinalState>
+    </PWLifecycle>
+</ParallelWorkflows>

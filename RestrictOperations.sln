@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestrictOperations", "Extension\RestrictOperations.csproj", "{CC1FD8AD-636A-4458-A30E-5937A1999C9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configurator", "Configurator\Configurator.csproj", "{551E08F2-22E8-4319-B411-608044F807C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC1FD8AD-636A-4458-A30E-5937A1999C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC1FD8AD-636A-4458-A30E-5937A1999C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC1FD8AD-636A-4458-A30E-5937A1999C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC1FD8AD-636A-4458-A30E-5937A1999C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{551E08F2-22E8-4319-B411-608044F807C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{551E08F2-22E8-4319-B411-608044F807C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{551E08F2-22E8-4319-B411-608044F807C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{551E08F2-22E8-4319-B411-608044F807C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
