@@ -1,3 +1,10 @@
+
+RestrictOperations_ParallelApproval adds functionality to lifecycle changes. The code is based on the Vault SDK sample RestrictOperations.
+Additional functionality: allow 4, 6, 8... eyes approval to be run parallel, the order does not matter. Once all approval paths are released the final release state automatically activates. Extend existing lifecycles by configuration settings. For detailed information and PowerPoint slidedeck reach out to Markus Koechl; Autodesk VARs have access to the documentation in ChannelHub->Events->OTX2016-3_PDM section.
+2017-11-29, Markus Koechl
+
+
+------------------- original readme -----------------
 Overview:
 RestrictOperations is a simple Vault extension which illustrates how to restrict operations by responding to Web Service Command Events.  The sample contains two parts.  The RestrictOperations.dll, which hooks to the Vault framework, and Configuratior.exe, which allows you to configure which operations are restricted.
  
