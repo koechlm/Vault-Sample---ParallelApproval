@@ -122,7 +122,7 @@ namespace RestrictOperations
                 foreach (XElement item in mPWLifecycles)
                 {
                     //mPWLfcNames.Add(item.Attribute("Name").Value); //get all registered lifecycle names
-                    LfCycDef[] defs = mgr.LifeCycleService.GetAllLifeCycleDefinitions();
+                    LfCycDef[] defs = mgr.LifeCycleService.GetAllLifeCycleDefinitions();  //mgr.DocumentServiceExtensions.GetAllLifeCycleDefinitions();
                     //get the lifecycle object for parallel approval by name
                     LfCycDef mLfCycle = defs.FirstOrDefault(n => n.DispName == item.Attribute("Name").Value);
                     //add the Name/ID pair to the hashtable
@@ -168,7 +168,7 @@ namespace RestrictOperations
         {
             RestrictSettings settings = RestrictSettings.Load();
             if (settings.RestrictedOperations.Contains(eventName))
-                eventArgs.AddRestriction(new ExtensionRestriction("Parallel Approval - Change State", "The listed states are required to finally release: " + mParallelStates[0] + ", " +
+                eventArgs.AddRestriction(new ExtensionRestriction("Parallel Approval - Statuswechsel", "Folgende Vorgänger Status sind Voraussetzung zur Freigabe: " + mParallelStates[0] + ", " +
                     mParallelStates[1] + ", " + mParallelStates[2]));
         }
 
@@ -180,7 +180,7 @@ namespace RestrictOperations
                 mStateNames = mStateNames + ", " + mStates[i];
             }
 
-            eventArgs.AddRestriction(new ExtensionRestriction(mFileName, "The listed predecessing states are expected to release: " + mStateNames));
+            eventArgs.AddRestriction(new ExtensionRestriction(mFileName, "Folgende Vorgänger Status sind Voraussetzung zur Freigabe: " + mStateNames));
         }
 
         void UpdateChangeOrderLifecycleStateEvents_GetRestrictions(object sender, UpdateChangeOrderLifeCycleStateCommandEventArgs e)
@@ -279,18 +279,17 @@ namespace RestrictOperations
                     {
                         return;
                     }
-                    if (!(mApprovalLfcycle.Contains(mFileCollection.Files[numFileCol - 1].FileLfCyc.LfCycDefId))) //(!(mLatestFile.FileLfCyc.LfCycDefId == mLfCycle.Id))
+                    if (!(mPWLfcycles.ContainsValue(mFileCollection.Files[numFileCol - 1].FileLfCyc.LfCycDefId))) //(!(mLatestFile.FileLfCyc.LfCycDefId == mLfCycle.Id))
                     {
                         return;
                     }
-
                     //check that current latestversion is not released state ? No -> continue
                     long mCurrentFinalStateID = (long)mPWFinalStates[mCurrentLfcID];
                     if (mLatestFile.FileLfCyc.LfCycStateId == mCurrentFinalStateID)
                     {
                         return;
                     }
-                    if (mReleaseStates.Contains(mLatestFile.FileLfCyc.LfCycStateId))
+                    if (mPWStates.ContainsValue(mLatestFile.FileLfCyc.LfCycStateId))
                     {
                         return;
                     }
@@ -408,8 +407,9 @@ namespace RestrictOperations
                     {
                         return;
                     }
-                    if (!(mApprovalLfcycle.Contains(mFileCollection.Files[numFileCol - 1].FileLfCyc.LfCycDefId)))
+                    if (!(mPWLfcycles.ContainsValue(mFileCollection.Files[numFileCol - 1].FileLfCyc.LfCycDefId)))
                     {
+                        
                         return;
                     }
                     //check that current latestversion is not released state ? 

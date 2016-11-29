@@ -34,7 +34,7 @@ namespace RestrictOperations
         public static string GetSettingsPath(string mSettingsFile)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
-            path = Path.Combine(path, @"Autodesk\Vault 2016\Extensions\RestrictOperations");
+            path = Path.Combine(path, @"Autodesk\Vault 2017\Extensions\RestrictOperations");
             return Path.Combine(path, mSettingsFile);
         }
 

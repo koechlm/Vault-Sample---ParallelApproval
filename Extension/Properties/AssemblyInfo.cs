@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RestrictOperations")]
-[assembly: AssemblyDescription("Restricts operations based on a settings file.")]
+[assembly: AssemblyTitle("Parallel Approval")]
+[assembly: AssemblyDescription("Restricts operations based applied to approval workflow")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Autodesk")]
-[assembly: AssemblyProduct("Vault SDK Sample - RestrictOperations")]
-[assembly: AssemblyCopyright("Copyright Â© Autodesk 2015")]
+[assembly: AssemblyProduct("Vault SDK Sample - RestrictOperations / Parallel Lifecycle Workflow")]
+[assembly: AssemblyCopyright("Copyright © Autodesk 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("21.0.59.0")]
-[assembly: AssemblyFileVersion("21.0.59.0")]
+[assembly: AssemblyVersion("22.0.0.0")]
+[assembly: AssemblyFileVersion("22.0.0.0")]
