@@ -4,7 +4,7 @@ Additional functionality: allow 4, 6, 8... eyes approval to be run parallel, the
 2017-11-29, Markus Koechl
 
 
-------------------- original reamde -----------------
+------------------- original readme -----------------
 Overview:
 RestrictOperations is a simple Vault extension which illustrates how to restrict operations by responding to Web Service Command Events.  The sample contains two parts.  The RestrictOperations.dll, which hooks to the Vault framework, and Configuratior.exe, which allows you to configure which operations are restricted.
  
